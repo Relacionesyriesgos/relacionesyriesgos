@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+<script>document.documentElement.className+=' js';</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Relaciones y Riesgos — Jack Southerman</title>
+<meta name="description" content="Estudios de confiabilidad, estudios de seguridad, entrevistas de seguridad y acompañamiento ejecutivo seguro. Más de 30 años de experiencia. Jack Southerman.">
+<meta name="theme-color" content="#070c1f">
+<link rel="canonical" href="https://relacionesyriesgos.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Relaciones & Riesgos — Seguridad y Confiabilidad">
+<meta property="og:description" content="Información confiable para decisiones más seguras. Verificación de antecedentes, estudios de seguridad y acompañamiento ejecutivo.">
+<meta property="og:url" content="https://relacionesyriesgos.com/">
+<meta property="og:image" content="https://relacionesyriesgos.com/foto-hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23070c1f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%237a4bb0'%3E%26amp;%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -123,7 +133,7 @@
   .btn:hover{transform:translateY(-1px);}
   .btn-primary{
     background:var(--fucsia);
-    color:var(--azul-950);
+    color:#fff;
   }
   .btn-ghost{
     border:1px solid var(--linea);
@@ -279,6 +289,184 @@
     .hero-photo{aspect-ratio:16/10;max-width:100%;}
     .cierre{flex-direction:column;align-items:flex-start;}
   }
+
+  /* ---- aviso: verificación de estudios ---- */
+  .aviso-verif{
+    margin:0 0 56px;
+    padding:30px 30px 28px;
+    border:1px solid var(--linea);
+    border-left:4px solid var(--fucsia-soft);
+    background:linear-gradient(135deg, var(--azul-900), var(--azul-950));
+  }
+  .aviso-verif .kicker{font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--fucsia-soft);letter-spacing:.1em;margin-bottom:12px;}
+  .aviso-verif h2{
+    font-family:'Fraunces', serif;font-weight:500;
+    font-size:clamp(26px,4vw,40px);line-height:1.1;max-width:24ch;
+  }
+  .aviso-verif h2 span{color:var(--fucsia-soft);}
+  .aviso-verif p{margin-top:14px;color:var(--texto-tenue);font-size:15.5px;max-width:60ch;}
+  .aviso-verif ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:18px;}
+  .aviso-verif li{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.04em;border:1px solid var(--linea);padding:6px 10px;color:var(--texto);}
+
+  /* ---- acompañamiento ejecutivo ---- */
+  .acomp{padding:60px 0 40px;border-top:1px solid var(--linea);}
+  .acomp .kicker{font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--texto-tenue);letter-spacing:.1em;margin-bottom:8px;}
+  .acomp h2{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(30px,4.6vw,46px);line-height:1.08;max-width:22ch;}
+  .acomp h2 span{color:var(--fucsia-soft);}
+  .acomp-lead{margin-top:18px;color:var(--texto-tenue);font-size:16px;line-height:1.7;max-width:62ch;}
+  .acomp-lead strong{color:var(--texto);font-weight:600;}
+  .acomp-foto{margin:34px 0 10px;border:1px solid var(--linea);overflow:hidden;aspect-ratio:16/9;position:relative;}
+  .acomp-foto img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.03);}
+  .acomp-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 60%, rgba(7,12,31,.7) 100%);}
+  .acomp-foto figcaption{position:absolute;left:18px;bottom:14px;z-index:1;font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.08em;color:var(--texto);}
+  .acomp h3.sub{font-size:20px;font-weight:600;margin:44px 0 6px;}
+  .acomp .sub-kicker{font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--fucsia-soft);letter-spacing:.08em;}
+  .servicio ul.puntos{list-style:none;margin-top:10px;}
+  .servicio ul.puntos li{color:var(--texto-tenue);font-size:14.5px;padding-left:16px;position:relative;max-width:58ch;}
+  .servicio ul.puntos li + li{margin-top:6px;}
+  .servicio ul.puntos li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--fucsia-soft);}
+  .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;}
+  .galeria div{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--linea);}
+  .galeria img{width:100%;height:100%;object-fit:cover;display:block;}
+  .pilares{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--linea);border-left:1px solid var(--linea);margin-top:18px;}
+  .pilar{padding:20px 16px;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .pilar b{display:block;font-size:15px;font-weight:600;margin-bottom:6px;}
+  .pilar p{color:var(--texto-tenue);font-size:13.5px;line-height:1.5;}
+  .dos-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:18px;}
+  .bloque{border:1px solid var(--linea);padding:22px;}
+  .bloque h4{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.1em;color:var(--fucsia-soft);font-weight:500;margin-bottom:12px;}
+  .bloque ul{list-style:none;}
+  .bloque li{color:var(--texto-tenue);font-size:14.5px;padding:8px 0;border-top:1px solid var(--linea);}
+  .bloque li:first-child{border-top:0;padding-top:0;}
+  .bloque li strong{color:var(--texto);font-weight:600;}
+  .acomp-cierre{margin-top:44px;padding:30px;border:1px solid var(--linea);background:var(--azul-900);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .acomp-cierre blockquote{font-family:'Fraunces', serif;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.3;max-width:34ch;}
+  @media (max-width:860px){
+    .pilares{grid-template-columns:repeat(2,1fr);}
+    .dos-col{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .galeria{grid-template-columns:1fr 1fr;}
+    .galeria div:last-child{grid-column:1/-1;aspect-ratio:16/9;}
+    .pilares{grid-template-columns:1fr;}
+    .aviso-verif{padding:24px 20px;}
+  }
+
+  /* =========================================================
+     PULIDO VISUAL — mismos colores y mismo orden
+     ========================================================= */
+  body{
+    background:
+      radial-gradient(900px 520px at 85% -120px, rgba(84,39,133,.28), transparent 70%),
+      radial-gradient(700px 500px at -10% 40%, rgba(42,58,122,.22), transparent 70%),
+      var(--azul-950);
+    background-attachment:fixed;
+  }
+  body::before{ /* retícula muy sutil */
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:linear-gradient(rgba(36,44,82,.35) 1px, transparent 1px),linear-gradient(90deg, rgba(36,44,82,.35) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:linear-gradient(180deg, rgba(0,0,0,.55), transparent 65%);
+    -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.55), transparent 65%);
+  }
+  .wrap{position:relative;z-index:1;}
+  ::selection{background:var(--fucsia);color:#fff;}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--fucsia-soft);outline-offset:3px;}
+
+  /* Cabecera fija y discreta */
+  header{position:sticky;top:0;z-index:20;padding-top:0;}
+  .brandline{
+    padding:18px 0;
+    background:linear-gradient(180deg, rgba(7,12,31,.92), rgba(7,12,31,.78));
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .brandline > span:last-child{position:relative;padding-left:14px;}
+  .brandline > span:last-child::before{content:"";position:absolute;left:0;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--fucsia-soft);box-shadow:0 0 0 4px rgba(122,75,176,.18);}
+
+  /* Títulos */
+  .titulo-principal{text-wrap:balance;}
+  .titulo-principal span{font-style:italic;}
+  .hero-copy h1,.bio h2,.servicios h2,.acomp h2,.aviso-verif h2{text-wrap:balance;}
+
+  /* Foto principal con marco de esquinas */
+  .hero-photo{overflow:visible;border:0;}
+  .hero-photo img{border:1px solid var(--linea);}
+  .hero-photo::after{inset:1px;}
+  .hero-photo::before{
+    content:"";position:absolute;inset:-10px;pointer-events:none;z-index:2;
+    background:
+      linear-gradient(var(--fucsia-soft),var(--fucsia-soft)) top left/22px 1px no-repeat,
+      linear-gradient(var(--fucsia-soft),var(--fucsia-soft)) top left/1px 22px no-repeat,
+      linear-gradient(var(--fucsia-soft),var(--fucsia-soft)) bottom right/22px 1px no-repeat,
+      linear-gradient(var(--fucsia-soft),var(--fucsia-soft)) bottom right/1px 22px no-repeat;
+  }
+
+  /* Kickers con línea */
+  .kicker{display:flex;align-items:center;gap:10px;}
+  .kicker::before{content:"";width:22px;height:1px;background:var(--fucsia-soft);flex:none;}
+
+  /* Botones */
+  .btn{border-radius:3px;transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;}
+  .btn-primary{box-shadow:0 8px 24px -10px rgba(122,75,176,.7);}
+  .btn-primary:hover{background:var(--fucsia-soft);}
+  .btn-ghost:hover{border-color:var(--fucsia-soft);background:rgba(122,75,176,.08);}
+  .btn::after{content:"→";display:inline-block;transition:transform .18s ease;opacity:.85;}
+  .btn:hover::after{transform:translateX(3px);}
+
+  /* Trayectoria */
+  .bio-num{
+    width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--fucsia-soft);border-radius:50%;
+    font-family:'Fraunces', serif;font-size:20px;font-weight:500;letter-spacing:0;color:var(--texto);
+    background:radial-gradient(circle at 30% 30%, rgba(122,75,176,.35), transparent 70%);
+  }
+
+  /* Filas de servicios */
+  .servicio{transition:background .25s ease;padding-left:8px;padding-right:8px;margin:0 -8px;}
+  .servicio:hover{background:linear-gradient(90deg, rgba(84,39,133,.12), transparent 70%);}
+  .servicio-photo{position:relative;}
+  .servicio-photo img{transition:transform .5s cubic-bezier(.2,.7,.2,1), filter .3s ease;}
+  .servicio:hover .servicio-photo img{transform:scale(1.05);filter:grayscale(0) contrast(1.05);}
+  .servicio h3{transition:color .2s ease;}
+  .servicio:hover h3{color:#fff;}
+
+  /* Aviso: comillas de fondo */
+  .aviso-verif{position:relative;overflow:hidden;}
+  .aviso-verif::after{
+    content:"“";position:absolute;right:18px;top:-40px;
+    font-family:'Fraunces', serif;font-size:220px;line-height:1;color:rgba(122,75,176,.14);pointer-events:none;
+  }
+
+  /* Galería y pilares */
+  .galeria img,.acomp-foto img{transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+  .galeria div:hover img{transform:scale(1.05);}
+  .pilar{transition:background .2s ease;}
+  .pilar:hover{background:rgba(84,39,133,.12);}
+  .pilar b{color:var(--texto);}
+  .pilar b::before{content:"";display:block;width:18px;height:2px;background:var(--fucsia-soft);margin-bottom:12px;}
+  .bloque{background:rgba(12,22,51,.5);}
+
+  /* Cierre y pie */
+  .cierre{position:relative;}
+  .cierre-frase{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(24px,3.2vw,34px);}
+  footer{border-top:1px solid var(--linea);margin-top:10px;}
+  footer a{color:var(--texto-tenue);text-decoration:none;}
+  footer a:hover{color:var(--texto);}
+
+  /* Aparición suave al hacer scroll */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);}
+  .js .reveal.visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;scroll-behavior:auto!important;}
+    .js .reveal{opacity:1;transform:none;}
+  }
+  @media (max-width:760px){
+    .brandline{padding:14px 0;}
+    .brandline .mono{font-size:11px;}
+    .servicio{margin:0;padding-left:0;padding-right:0;}
+    .hero-photo::before{inset:-6px;}
+    .aviso-verif::after{font-size:150px;top:-24px;}
+  }
 </style>
 </head>
 <body>
@@ -295,7 +483,7 @@
     <div class="titulo-principal">Relaciones <span>&amp;</span> Riesgos</div>
 
     <div class="hero-photo">
-      <img src="foto-hero.jpg" alt="Entrevista de seguridad">
+      <img src="foto-hero.jpg" alt="Silueta de un hombre frente a un edificio al atardecer" width="1400" height="787" fetchpriority="high">
     </div>
 
     <div class="hero-copy">
@@ -304,14 +492,31 @@
       <div class="cta-row">
         <a class="btn btn-primary" href="https://wa.me/573118895533" target="_blank" rel="noopener">Escribir por WhatsApp</a>
         <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+        <a class="btn btn-ghost" href="#acompanamiento">Acompañamiento ejecutivo</a>
       </div>
+    </div>
+  </section>
+
+  <section class="aviso-verif reveal" id="verificacion">
+    <div class="kicker">VERIFICACIÓN DE ESTUDIOS Y ANTECEDENTES</div>
+    <h2>Los títulos se verifican antes, <span>no después del escándalo.</span></h2>
+    <p>Una hoja de vida puede verse impecable y no resistir una sola llamada. Antes de contratar, nombrar o asociarse con alguien, confirmamos con las fuentes que lo que dice es cierto. Que no le pase a usted ni a su organización.</p>
+    <ul>
+      <li>Títulos y diplomas</li>
+      <li>Experiencia laboral</li>
+      <li>Referencias</li>
+      <li>Antecedentes</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/573118895533?text=Hola%2C%20quiero%20verificar%20los%20estudios%20y%20antecedentes%20de%20una%20persona." target="_blank" rel="noopener">Verificar a una persona</a>
+      <a class="btn btn-ghost" href="#servicios">Ver Estudio de Confiabilidad</a>
     </div>
   </section>
 
   <section class="bio" id="trayectoria">
     <div class="kicker mono">00 · TRAYECTORIA</div>
     <h2>Más de 30 años protegiendo personas, instalaciones y recursos.</h2>
-    <div class="bio-grid">
+    <div class="bio-grid reveal">
       <div class="bio-num">JS</div>
       <div class="bio-body">
         <p><strong>Jack Southerman</strong> cuenta con más de <strong>30 años de experiencia en seguridad, liderazgo y gestión del riesgo</strong>, especializado en la protección de personas, instalaciones y recursos.</p>
@@ -326,9 +531,9 @@
     <h2>Tres servicios, un mismo propósito.</h2>
 
     <div class="servicio-list">
-      <div class="servicio">
+      <div class="servicio reveal">
         <div class="servicio-photo">
-          <img src="foto-confiabilidad.jpg" alt="Estudio de Confiabilidad">
+          <img loading="lazy" width="1200" height="900" src="foto-confiabilidad.jpg" alt="Estudio de Confiabilidad">
         </div>
         <div>
           <span class="num mono">EC</span>
@@ -337,9 +542,9 @@
         </div>
       </div>
 
-      <div class="servicio">
+      <div class="servicio reveal">
         <div class="servicio-photo">
-          <img src="foto-seguridad.jpg" alt="Estudios de Seguridad">
+          <img loading="lazy" width="1200" height="900" src="foto-seguridad.jpg" alt="Estudios de Seguridad">
         </div>
         <div>
           <span class="num mono">ES</span>
@@ -348,9 +553,9 @@
         </div>
       </div>
 
-      <div class="servicio">
+      <div class="servicio reveal">
         <div class="servicio-photo">
-          <img src="foto-entrevista.jpg" alt="Entrevista de Seguridad">
+          <img loading="lazy" width="1200" height="900" src="foto-entrevista.jpg" alt="Entrevista de Seguridad">
         </div>
         <div>
           <span class="num mono">ES2</span>
@@ -361,6 +566,113 @@
     </div>
   </section>
 
+  <section class="acomp" id="acompanamiento">
+    <div class="kicker">02 · SERVICIO PREMIUM</div>
+    <h2>Acompañamiento Ejecutivo y <span>Empresarial Seguro</span></h2>
+    <p class="acomp-lead">Movilidad premium para ejecutivos, empresarios y personas que necesitan desplazarse con <strong>seguridad, discreción y puntualidad</strong>. Cubrimos el traslado en vehículo dentro de la ciudad y sus alrededores, y vuelos chárter a ciudades del país y del exterior, siempre con un <strong>acompañante de alto nivel y profesional</strong>.</p>
+
+    <figure class="acomp-foto reveal">
+      <img loading="lazy" src="foto-acompanamiento.jpg" alt="Avioneta para vuelos chárter en plataforma">
+      <figcaption>POR TIERRA O POR AIRE</figcaption>
+    </figure>
+
+    <div class="servicio-list" style="margin-top:34px">
+      <div class="servicio reveal">
+        <div class="servicio-photo"><img loading="lazy" src="foto-vehiculo.jpg" alt="Vehículo ejecutivo de alta gama"></div>
+        <div>
+          <span class="num mono">AE·01</span>
+          <h3>Traslado vehicular urbano y regional</h3>
+          <ul class="puntos">
+            <li>Vehículos de alta gama, en excelente estado, con mantenimiento preventivo y seguros vigentes.</li>
+            <li>Rutas planeadas con alternas, monitoreo del trayecto y comunicación con la central de operación.</li>
+            <li>Traslados a reuniones, aeropuertos, eventos y municipios cercanos.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="servicio reveal">
+        <div class="servicio-photo"><img loading="lazy" src="foto-charter.jpg" alt="Avioneta Grand Caravan para vuelos chárter"></div>
+        <div>
+          <span class="num mono">AE·02</span>
+          <h3>Vuelos chárter nacionales e internacionales</h3>
+          <ul class="puntos">
+            <li>Vuelos privados a ciudades del país, incluidas zonas de difícil acceso por tierra, y a destinos en el exterior.</li>
+            <li>Aeronaves según la necesidad, con itinerarios flexibles.</li>
+            <li>Gestión de permisos, planes de vuelo y trámites migratorios y aduaneros.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="servicio reveal">
+        <div class="servicio-photo"><img loading="lazy" src="foto-vehiculo-3.jpg" alt="Vehículo ejecutivo en ruta"></div>
+        <div>
+          <span class="num mono">AE·03</span>
+          <h3>Servicio puerta a puerta</h3>
+          <p>Un solo acompañante, un solo contacto y un solo cobro, desde la oficina hasta el destino final, por tierra o por aire.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">El acompañante</h3>
+    <div class="sub-kicker">ALTO NIVEL Y PROFESIONALISMO</div>
+    <div class="dos-col reveal">
+      <div class="bloque">
+        <h4>QUIÉN LO ACOMPAÑA</h4>
+        <ul>
+          <li>Personal seleccionado, con verificación de antecedentes y evaluación continua.</li>
+          <li>Formación en conducción defensiva y protocolos de seguridad.</li>
+          <li>Presentación impecable, discreción y confidencialidad absolutas.</li>
+        </ul>
+      </div>
+      <div class="bloque">
+        <h4>PARA QUIÉN ES</h4>
+        <ul>
+          <li>Ejecutivos, directivos y empresarios.</li>
+          <li>Inversionistas, delegaciones y clientes corporativos.</li>
+          <li>Personas que requieren un nivel adicional de protección en sus desplazamientos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="galeria reveal">
+      <div><img loading="lazy" src="foto-vehiculo-2.jpg" alt="Sedán ejecutivo"></div>
+      <div><img loading="lazy" src="foto-vehiculo.jpg" alt="Vehículo de alta gama"></div>
+      <div><img loading="lazy" src="foto-charter.jpg" alt="Aeronave para vuelos chárter"></div>
+    </div>
+
+    <h3 class="sub">Por qué elegirnos</h3>
+    <div class="pilares reveal">
+      <div class="pilar"><b>Seguridad</b><p>En tierra y en aire.</p></div>
+      <div class="pilar"><b>Puntualidad</b><p>Y flexibilidad de agenda.</p></div>
+      <div class="pilar"><b>Productividad</b><p>El traslado se aprovecha para trabajar o descansar.</p></div>
+      <div class="pilar"><b>Alcance</b><p>De la ciudad a destinos nacionales e internacionales.</p></div>
+      <div class="pilar"><b>Imagen</b><p>Profesional en acompañante, vehículo y aeronave.</p></div>
+    </div>
+
+    <h3 class="sub">Modalidades</h3>
+    <div class="dos-col reveal">
+      <div class="bloque">
+        <h4>CONTRATACIÓN</h4>
+        <ul>
+          <li><strong>Urbano:</strong> por trayecto, hora, jornada o plan mensual corporativo.</li>
+          <li><strong>Vuelo chárter:</strong> por hora de vuelo o por ruta.</li>
+          <li><strong>Contratos corporativos</strong> con facturación consolidada.</li>
+        </ul>
+      </div>
+      <div class="bloque">
+        <h4>CÓMO EMPEZAR</h4>
+        <ul>
+          <li>Cuéntenos fecha, origen, destino y número de pasajeros.</li>
+          <li>Le enviamos la propuesta con ruta, vehículo o aeronave y tarifa.</li>
+          <li>Confirmada la agenda, su acompañante queda asignado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acomp-cierre reveal">
+      <blockquote>“Muévase con seguridad, por tierra o por aire, y llegue a tiempo a donde su agenda lo requiera.”</blockquote>
+      <a class="btn btn-primary" href="https://wa.me/573118895533?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Acompa%C3%B1amiento%20Ejecutivo%20y%20Empresarial%20Seguro." target="_blank" rel="noopener">Solicitar acompañamiento</a>
+    </div>
+  </section>
+
   <section class="cierre">
     <div class="cierre-frase">¿Necesitas evaluar un riesgo antes de decidir? <span>Hablemos.</span></div>
     <a class="btn btn-primary" href="https://wa.me/573118895533" target="_blank" rel="noopener">311 889 5533</a>
@@ -368,8 +680,20 @@
 
   <footer>
     <span>JACK SOUTHERMAN — Seguridad y Confiabilidad</span>
+    <span><a href="https://wa.me/573118895533" target="_blank" rel="noopener">WhatsApp 311 889 5533</a> · relacionesyriesgos.com · © <span id="anio">2026</span></span>
   </footer>
 </div>
 
+<script>
+  (function () {
+    var y = document.getElementById("anio"); if (y) y.textContent = new Date().getFullYear();
+    var els = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("visible"); }); return; }
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
 </body>
 </html>
