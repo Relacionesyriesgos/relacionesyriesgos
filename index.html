@@ -467,6 +467,119 @@
     .hero-photo::before{inset:-6px;}
     .aviso-verif::after{font-size:150px;top:-24px;}
   }
+
+  /* =========================================================
+     AVISO: reporte visual
+     ========================================================= */
+  .aviso-verif::after{display:none;}
+  .aviso-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center;}
+  .reporte{
+    position:relative;padding:22px 22px 20px;border:1px solid var(--linea);
+    background:linear-gradient(160deg, rgba(22,33,77,.9), rgba(7,12,31,.95));
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(122,75,176,.08) inset;
+    transform:rotate(1.2deg);color:var(--texto-tenue);
+  }
+  .rep-head{display:flex;justify-content:space-between;font-family:'IBM Plex Mono', monospace;font-size:10.5px;letter-spacing:.1em;color:var(--fucsia-soft);padding-bottom:12px;border-bottom:1px solid var(--linea);}
+  .rep-id{color:var(--texto-tenue);}
+  .rep-perfil{display:flex;align-items:center;gap:14px;padding:16px 0;color:var(--texto-tenue);}
+  .rep-lineas{flex:1;display:flex;flex-direction:column;gap:8px;}
+  .rep-lineas i{display:block;height:7px;border-radius:4px;background:rgba(154,161,196,.22);}
+  .aviso-verif .rep-items{display:block;list-style:none;margin-top:0;border-top:1px solid var(--linea);}
+  .aviso-verif .rep-items li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border:0;border-bottom:1px solid var(--linea);font-family:'Space Grotesk', sans-serif;font-size:13.5px;letter-spacing:0;color:var(--texto);}
+  .rep-items li span{color:var(--texto);}
+  .rep-items li b{font-family:'IBM Plex Mono', monospace;font-size:11.5px;font-weight:500;letter-spacing:.02em;white-space:nowrap;}
+  .rep-items li.ok b{color:var(--texto-tenue);}
+  .aviso-verif .rep-items li.no{background:linear-gradient(90deg, rgba(122,75,176,.22), transparent);margin:0 -10px;padding-left:10px;padding-right:10px;}
+  .rep-items li.no b{color:#c9a6ff;}
+  .rep-pie{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;font-family:'IBM Plex Mono', monospace;font-size:10.5px;letter-spacing:.08em;}
+  .rep-pie b{font-family:'Space Grotesk', sans-serif;font-size:13px;letter-spacing:0;color:var(--texto);font-weight:600;}
+  .rep-sello{
+    position:absolute;right:20px;top:62px;transform:rotate(-12deg);
+    font-family:'IBM Plex Mono', monospace;font-weight:500;font-size:13px;letter-spacing:.22em;
+    color:var(--fucsia-soft);border:2px solid var(--fucsia-soft);padding:5px 10px;opacity:.85;
+  }
+  /* animación: los ítems se van marcando */
+  .js .aviso-verif .rep-items li{opacity:0;transform:translateX(8px);transition:opacity .5s ease, transform .5s ease;}
+  .js .aviso-verif.visible .rep-items li{opacity:1;transform:none;}
+  .js .aviso-verif.visible .rep-items li:nth-child(1){transition-delay:.35s}
+  .js .aviso-verif.visible .rep-items li:nth-child(2){transition-delay:.6s}
+  .js .aviso-verif.visible .rep-items li:nth-child(3){transition-delay:.85s}
+  .js .aviso-verif.visible .rep-items li:nth-child(4){transition-delay:1.15s}
+  .js .aviso-verif .rep-sello{opacity:0;transform:rotate(-12deg) scale(1.6);transition:opacity .35s ease 1.6s, transform .35s cubic-bezier(.2,.9,.3,1.4) 1.6s;}
+  .js .aviso-verif.visible .rep-sello{opacity:.85;transform:rotate(-12deg) scale(1);}
+
+  /* =========================================================
+     ACOMPAÑAMIENTO: selector y secciones premium
+     ========================================================= */
+  .modos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px;}
+  .modo{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--linea);text-decoration:none;color:var(--texto);}
+  .modo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+  .modo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,12,31,.05) 30%, rgba(7,12,31,.88) 100%);}
+  .modo:hover img{transform:scale(1.05);}
+  .modo-txt{position:absolute;left:18px;bottom:16px;right:18px;z-index:1;display:flex;flex-direction:column;gap:2px;}
+  .modo-txt small{font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:.14em;color:#c9a6ff;}
+  .modo-txt b{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(20px,2.6vw,28px);}
+  .modo-txt b::after{content:" →";font-family:'Space Grotesk', sans-serif;font-size:.7em;opacity:.8;transition:margin .2s ease;}
+  .modo:hover .modo-txt b::after{margin-left:6px;}
+
+  .premium{padding:70px 0 50px;border-top:1px solid var(--linea);}
+  .panel{position:relative;margin:0;aspect-ratio:16/8;overflow:hidden;border:1px solid var(--linea);}
+  .panel img{width:100%;height:100%;object-fit:cover;display:block;}
+  .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(7,12,31,.92) 0%, rgba(7,12,31,.55) 45%, rgba(7,12,31,.05) 75%), linear-gradient(0deg, rgba(7,12,31,.6), transparent 40%);}
+  .panel figcaption{position:absolute;left:clamp(20px,4vw,44px);bottom:clamp(20px,4vw,40px);z-index:1;display:flex;flex-direction:column;gap:12px;max-width:60%;}
+  .panel-kicker{font-family:'IBM Plex Mono', monospace;font-size:12px;letter-spacing:.16em;color:#c9a6ff;display:flex;align-items:center;gap:10px;}
+  .panel-kicker::before{content:"";width:22px;height:1px;background:#c9a6ff;}
+  .panel-titulo{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(28px,4.6vw,50px);line-height:1.04;color:#fff;}
+  .panel-titulo em{font-style:italic;color:#c9a6ff;}
+
+  .specs{display:grid;grid-template-columns:repeat(3,1fr);margin-top:-1px;border:1px solid var(--linea);border-top:0;background:rgba(12,22,51,.55);}
+  .spec{padding:26px 24px;border-right:1px solid var(--linea);}
+  .spec:last-child{border-right:0;}
+  .spec-n{display:block;font-family:'Fraunces', serif;font-style:italic;font-size:30px;line-height:1;color:var(--fucsia-soft);margin-bottom:14px;}
+  .spec h3{font-size:16.5px;font-weight:600;margin-bottom:6px;}
+  .spec p{color:var(--texto-tenue);font-size:14px;line-height:1.55;}
+  .premium .galeria{margin-top:14px;}
+  .premium .dos-col{margin-top:28px;}
+
+  .tarifa{margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 24px;border:1px solid var(--linea);border-left:3px solid var(--fucsia-soft);background:linear-gradient(90deg, rgba(84,39,133,.16), transparent 70%);}
+  .tarifa p{color:var(--texto);font-size:16px;margin-top:4px;}
+  .tarifa-k{font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:.14em;color:#c9a6ff;}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border:1px solid var(--linea);}
+  .split-foto{aspect-ratio:4/3;overflow:hidden;}
+  .split-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+  .split:hover .split-foto img{transform:scale(1.04);}
+  .split-txt{padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;justify-content:center;gap:14px;background:var(--azul-900);}
+  .split-frase{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(21px,2.6vw,27px);line-height:1.25;color:#fff;}
+  .split-txt p:last-child{color:var(--texto-tenue);font-size:15px;}
+
+  .puerta{padding:clamp(28px,5vw,54px) clamp(22px,4vw,44px);border:1px solid var(--linea);text-align:center;background:radial-gradient(600px 220px at 50% 0%, rgba(84,39,133,.28), transparent 70%), var(--azul-900);}
+  .puerta .tarifa-k{display:block;margin-bottom:14px;}
+  .puerta-frase{font-family:'Fraunces', serif;font-weight:500;font-size:clamp(24px,3.6vw,38px);line-height:1.15;color:#fff;}
+  .puerta-frase em{color:#c9a6ff;}
+  .premium-final h3.sub{font-size:20px;font-weight:600;margin:44px 0 0;}
+  .premium-final .pilares{margin-top:16px;}
+
+  @media (max-width:860px){
+    .aviso-grid{grid-template-columns:1fr;gap:30px;}
+    .reporte{transform:none;max-width:440px;}
+    .specs{grid-template-columns:1fr;}
+    .spec{border-right:0;border-bottom:1px solid var(--linea);}
+    .spec:last-child{border-bottom:0;}
+    .split{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .modos{grid-template-columns:1fr;}
+    .panel{aspect-ratio:4/5;}
+    .panel::after{background:linear-gradient(0deg, rgba(7,12,31,.95) 0%, rgba(7,12,31,.5) 50%, rgba(7,12,31,.1) 80%);}
+    .panel figcaption{max-width:none;right:20px;}
+    .panel img{object-position:72% center;}
+    .tarifa .btn{width:100%;justify-content:center;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .js .aviso-verif .rep-items li,.js .aviso-verif .rep-sello{opacity:1!important;transform:none!important;}
+    .js .aviso-verif .rep-sello{transform:rotate(-12deg)!important;}
+  }
 </style>
 </head>
 <body>
@@ -499,6 +612,8 @@
 
   <section class="aviso-verif reveal" id="verificacion">
     <div class="kicker">VERIFICACIÓN DE ESTUDIOS Y ANTECEDENTES</div>
+    <div class="aviso-grid">
+    <div class="aviso-texto">
     <h2>Los títulos se verifican antes, <span>no después del escándalo.</span></h2>
     <p>Una hoja de vida puede verse impecable y no resistir una sola llamada. Antes de contratar, nombrar o asociarse con alguien, confirmamos con las fuentes que lo que dice es cierto. Que no le pase a usted ni a su organización.</p>
     <ul>
@@ -510,6 +625,24 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="https://wa.me/573118895533?text=Hola%2C%20quiero%20verificar%20los%20estudios%20y%20antecedentes%20de%20una%20persona." target="_blank" rel="noopener">Verificar a una persona</a>
       <a class="btn btn-ghost" href="#servicios">Ver Estudio de Confiabilidad</a>
+    </div>
+    </div>
+
+    <div class="reporte" aria-hidden="true">
+      <div class="rep-head"><span>REPORTE DE VERIFICACIÓN</span><span class="rep-id">N.º 0427</span></div>
+      <div class="rep-perfil">
+        <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-opacity=".35"/><circle cx="24" cy="19" r="7.5" fill="currentColor" fill-opacity=".55"/><path d="M10 39c2.5-7 8-10.5 14-10.5S35.5 32 38 39" fill="currentColor" fill-opacity=".55"/></svg>
+        <div class="rep-lineas"><i style="width:72%"></i><i style="width:46%"></i></div>
+      </div>
+      <ul class="rep-items">
+        <li class="ok"><span>Experiencia laboral</span><b>✓ Confirmada</b></li>
+        <li class="ok"><span>Referencias</span><b>✓ Confirmadas</b></li>
+        <li class="ok"><span>Antecedentes</span><b>✓ Sin registros</b></li>
+        <li class="no"><span>Título profesional</span><b>✕ No registra</b></li>
+      </ul>
+      <div class="rep-pie"><span>Resultado</span><b>1 inconsistencia detectada</b></div>
+      <div class="rep-sello">REVISAR</div>
+    </div>
     </div>
   </section>
 
@@ -569,53 +702,44 @@
   <section class="acomp" id="acompanamiento">
     <div class="kicker">02 · SERVICIO PREMIUM</div>
     <h2>Acompañamiento Ejecutivo y <span>Empresarial Seguro</span></h2>
-    <p class="acomp-lead">Movilidad premium para ejecutivos, empresarios y personas que necesitan desplazarse con <strong>seguridad, discreción y puntualidad</strong>. Cubrimos el traslado en vehículo dentro de la ciudad y sus alrededores, y vuelos chárter a ciudades del país y del exterior, siempre con un <strong>acompañante de alto nivel y profesional</strong>.</p>
+    <p class="acomp-lead">Movilidad premium para ejecutivos, empresarios y personas que necesitan desplazarse con <strong>seguridad, discreción y puntualidad</strong>. Por tierra o por aire, siempre con un <strong>acompañante de alto nivel y profesional</strong>.</p>
+    <div class="modos reveal">
+      <a class="modo" href="#por-tierra">
+        <img loading="lazy" src="foto-carro-hero.jpg" alt="">
+        <span class="modo-txt"><small>POR TIERRA</small><b>Traslado ejecutivo</b></span>
+      </a>
+      <a class="modo" href="#por-aire">
+        <img loading="lazy" src="foto-acompanamiento.jpg" alt="">
+        <span class="modo-txt"><small>POR AIRE</small><b>Vuelos chárter</b></span>
+      </a>
+    </div>
+  </section>
 
-    <figure class="acomp-foto reveal">
-      <img loading="lazy" src="foto-acompanamiento.jpg" alt="Avioneta para vuelos chárter en plataforma">
-      <figcaption>POR TIERRA O POR AIRE</figcaption>
+  <!-- ===================== POR TIERRA ===================== -->
+  <section class="premium" id="por-tierra">
+    <figure class="panel reveal">
+      <img loading="lazy" src="foto-carro-hero.jpg" alt="Vehículo ejecutivo de alta gama" width="1800" height="1012">
+      <figcaption>
+        <span class="panel-kicker">02.A · POR TIERRA</span>
+        <span class="panel-titulo">Traslado ejecutivo<br><em>urbano y regional</em></span>
+      </figcaption>
     </figure>
 
-    <div class="servicio-list" style="margin-top:34px">
-      <div class="servicio reveal">
-        <div class="servicio-photo"><img loading="lazy" src="foto-vehiculo.jpg" alt="Vehículo ejecutivo de alta gama"></div>
-        <div>
-          <span class="num mono">AE·01</span>
-          <h3>Traslado vehicular urbano y regional</h3>
-          <ul class="puntos">
-            <li>Vehículos de alta gama, en excelente estado, con mantenimiento preventivo y seguros vigentes.</li>
-            <li>Rutas planeadas con alternas, monitoreo del trayecto y comunicación con la central de operación.</li>
-            <li>Traslados a reuniones, aeropuertos, eventos y municipios cercanos.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="servicio reveal">
-        <div class="servicio-photo"><img loading="lazy" src="foto-charter.jpg" alt="Avioneta Grand Caravan para vuelos chárter"></div>
-        <div>
-          <span class="num mono">AE·02</span>
-          <h3>Vuelos chárter nacionales e internacionales</h3>
-          <ul class="puntos">
-            <li>Vuelos privados a ciudades del país, incluidas zonas de difícil acceso por tierra, y a destinos en el exterior.</li>
-            <li>Aeronaves según la necesidad, con itinerarios flexibles.</li>
-            <li>Gestión de permisos, planes de vuelo y trámites migratorios y aduaneros.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="servicio reveal">
-        <div class="servicio-photo"><img loading="lazy" src="foto-vehiculo-3.jpg" alt="Vehículo ejecutivo en ruta"></div>
-        <div>
-          <span class="num mono">AE·03</span>
-          <h3>Servicio puerta a puerta</h3>
-          <p>Un solo acompañante, un solo contacto y un solo cobro, desde la oficina hasta el destino final, por tierra o por aire.</p>
-        </div>
-      </div>
+    <div class="specs reveal">
+      <div class="spec"><span class="spec-n">01</span><h3>Vehículos de alta gama</h3><p>En excelente estado, con mantenimiento preventivo y seguros vigentes.</p></div>
+      <div class="spec"><span class="spec-n">02</span><h3>Rutas planeadas</h3><p>Con rutas alternas, monitoreo del trayecto y comunicación con la central de operación.</p></div>
+      <div class="spec"><span class="spec-n">03</span><h3>A donde lo necesite</h3><p>Reuniones, aeropuertos, eventos y municipios cercanos.</p></div>
     </div>
 
-    <h3 class="sub">El acompañante</h3>
-    <div class="sub-kicker">ALTO NIVEL Y PROFESIONALISMO</div>
+    <div class="galeria reveal">
+      <div><img loading="lazy" src="foto-vehiculo.jpg" alt="Vehículo ejecutivo, vista frontal"></div>
+      <div><img loading="lazy" src="foto-vehiculo-2.jpg" alt="Sedán ejecutivo, vista trasera"></div>
+      <div><img loading="lazy" src="foto-vehiculo-3.jpg" alt="Vehículo ejecutivo en ruta"></div>
+    </div>
+
     <div class="dos-col reveal">
       <div class="bloque">
-        <h4>QUIÉN LO ACOMPAÑA</h4>
+        <h4>EL ACOMPAÑANTE</h4>
         <ul>
           <li>Personal seleccionado, con verificación de antecedentes y evaluación continua.</li>
           <li>Formación en conducción defensiva y protocolos de seguridad.</li>
@@ -632,10 +756,48 @@
       </div>
     </div>
 
-    <div class="galeria reveal">
-      <div><img loading="lazy" src="foto-vehiculo-2.jpg" alt="Sedán ejecutivo"></div>
-      <div><img loading="lazy" src="foto-vehiculo.jpg" alt="Vehículo de alta gama"></div>
-      <div><img loading="lazy" src="foto-charter.jpg" alt="Aeronave para vuelos chárter"></div>
+    <div class="tarifa reveal">
+      <div><span class="tarifa-k">MODALIDAD URBANA</span><p>Por trayecto, hora, jornada o plan mensual corporativo.</p></div>
+      <a class="btn btn-primary" href="https://wa.me/573118895533?text=Hola%2C%20quiero%20cotizar%20un%20traslado%20ejecutivo%20en%20veh%C3%ADculo." target="_blank" rel="noopener">Cotizar traslado</a>
+    </div>
+  </section>
+
+  <!-- ===================== POR AIRE ===================== -->
+  <section class="premium" id="por-aire">
+    <figure class="panel reveal">
+      <img loading="lazy" src="foto-acompanamiento.jpg" alt="Avioneta para vuelos chárter en plataforma" width="1800" height="1012">
+      <figcaption>
+        <span class="panel-kicker">02.B · POR AIRE</span>
+        <span class="panel-titulo">Vuelos chárter<br><em>nacionales e internacionales</em></span>
+      </figcaption>
+    </figure>
+
+    <div class="specs reveal">
+      <div class="spec"><span class="spec-n">01</span><h3>Destinos</h3><p>Ciudades del país, incluidas zonas de difícil acceso por tierra, y destinos en el exterior.</p></div>
+      <div class="spec"><span class="spec-n">02</span><h3>Aeronave a la medida</h3><p>Aeronaves según la necesidad, con itinerarios flexibles.</p></div>
+      <div class="spec"><span class="spec-n">03</span><h3>Trámites resueltos</h3><p>Gestión de permisos, planes de vuelo y trámites migratorios y aduaneros.</p></div>
+    </div>
+
+    <div class="split reveal">
+      <div class="split-foto"><img loading="lazy" src="foto-avion-detalle.jpg" alt="Detalle de la aeronave para vuelos chárter"></div>
+      <div class="split-txt">
+        <span class="tarifa-k">EN EL AIRE, EL MISMO ESTÁNDAR</span>
+        <p class="split-frase">Su acompañante viaja con usted: desde la salida de la oficina hasta la llegada al destino final.</p>
+        <p>Itinerarios flexibles que se ajustan a su agenda, no al revés.</p>
+      </div>
+    </div>
+
+    <div class="tarifa reveal">
+      <div><span class="tarifa-k">MODALIDAD CHÁRTER</span><p>Por hora de vuelo o por ruta.</p></div>
+      <a class="btn btn-primary" href="https://wa.me/573118895533?text=Hola%2C%20quiero%20cotizar%20un%20vuelo%20ch%C3%A1rter." target="_blank" rel="noopener">Cotizar vuelo chárter</a>
+    </div>
+  </section>
+
+  <!-- ===================== PUERTA A PUERTA + CIERRE ===================== -->
+  <section class="premium premium-final">
+    <div class="puerta reveal">
+      <span class="tarifa-k">SERVICIO PUERTA A PUERTA</span>
+      <p class="puerta-frase">Un solo acompañante, un solo contacto y un solo cobro.<br><em>Por tierra o por aire.</em></p>
     </div>
 
     <h3 class="sub">Por qué elegirnos</h3>
@@ -647,14 +809,12 @@
       <div class="pilar"><b>Imagen</b><p>Profesional en acompañante, vehículo y aeronave.</p></div>
     </div>
 
-    <h3 class="sub">Modalidades</h3>
     <div class="dos-col reveal">
       <div class="bloque">
-        <h4>CONTRATACIÓN</h4>
+        <h4>CONTRATOS CORPORATIVOS</h4>
         <ul>
-          <li><strong>Urbano:</strong> por trayecto, hora, jornada o plan mensual corporativo.</li>
-          <li><strong>Vuelo chárter:</strong> por hora de vuelo o por ruta.</li>
-          <li><strong>Contratos corporativos</strong> con facturación consolidada.</li>
+          <li>Planes mensuales para su equipo directivo.</li>
+          <li>Facturación consolidada de traslados y vuelos.</li>
         </ul>
       </div>
       <div class="bloque">
